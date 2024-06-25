@@ -7,8 +7,6 @@ import { useMap } from 'react-leaflet';
 
 import location from '../location.json';
 
-
-
 function LeafletRoutingMachine({ onDistanceUpdate, onHandleStartAndEnd }) {
 
     const map = useMap();

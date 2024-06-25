@@ -10,7 +10,7 @@ function Body() {
     const [endLoc, setEndLoc] = useState('');
 
     const handleSubmit = () => {
-        (startLoc && endLoc)? setShowAvailableCars(true) : alert("Starting Point and Destination Point are Empty");
+        ((startLoc && endLoc)  &&  (startLoc!==endLoc))? setShowAvailableCars(true) : alert("Type the Valid Starting Point and Destination Point");
     };
 
     const handleDistanceUpdate = (distance) => {
