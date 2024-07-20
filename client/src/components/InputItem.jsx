@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import locations from '../location.json';
 
-function InputItem(props) {
+function InputItem({ type, isActive, onFocus }) {
   const [inputValue, setInputValue] = useState('');
   const [suggestions, setSuggestions] = useState([]);
 
@@ -38,18 +38,19 @@ function InputItem(props) {
   return (
     <div className='search-input'>
 
-      <i className={(props.type === 'from') ? "ri-map-pin-user-line" : "ri-map-pin-line"}></i>
+      <i className={(type === 'from') ? "ri-map-pin-user-line" : "ri-map-pin-line"}></i>
 
       <input
-        id={(props.type === 'from') ? 'start' : 'end'}
+        id={(type === 'from') ? 'start' : 'end'}
         type="text"
-        placeholder={(props.type === 'from') ? 'starting point' : 'destination point'}
+        placeholder={(type === 'from') ? 'starting point' : 'destination point'}
         value={inputValue}
         onChange={handleInputChange}
+        onFocus={onFocus}
       />
 
       {
-        suggestions.length > 0 && (
+        isActive && suggestions.length > 0 && (
           <div className="dropdown">
             {suggestions.map(location => (
               <div key={location.lat} className='suggestion' onClick={() => handleSuggestionClick(location.city)}>

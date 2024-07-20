@@ -32,7 +32,6 @@ function Cars({ distance, type, startLoc, endLoc }) {
     return carNumber;
   }
 
-
   if (type === 'suv') {
     carImage = suv;
     carType = type;
