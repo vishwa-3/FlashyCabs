@@ -12,6 +12,28 @@ body {
     font-family: "lato", cursive;
 }
 
+/* For Chrome, Brave, and other WebKit browsers */
+::-webkit-scrollbar {
+    width: 6px;
+    /* Change width for vertical scrollbar */
+    height: 6px;
+    /* Change height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
 
 @mixin tablet {
     @media screen and (max-width : 768px) {
@@ -69,7 +91,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 20px);
-    
+
 
     display: flex;
     align-items: center;
@@ -229,7 +251,7 @@ body {
 
 .home-page {
     padding: 10px;
-    
+
 
     .btn {
         padding: 8px 2rem;
@@ -279,7 +301,7 @@ body {
 
     .header {
 
-        
+
         @include mobile {
             padding: 8px;
 
@@ -443,6 +465,7 @@ body {
 
                     .car-details {
                         font-size: 15px;
+
                         @include mobile {
                             font-size: 12px;
                         }
@@ -471,7 +494,7 @@ body {
                         }
                     }
 
-                    
+
 
                     .price {
                         display: flex;
