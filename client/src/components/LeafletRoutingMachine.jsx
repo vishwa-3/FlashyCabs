@@ -7,6 +7,12 @@ import { useMap } from 'react-leaflet';
 
 import location from '../location.json';
 
+L.Icon.Default.mergeOptions({
+    iconRetinaUrl: 'marker-icon-2x.png',
+    iconUrl: 'marker-icon.png',
+    shadowUrl: 'marker-shadow.png'
+});
+
 function LeafletRoutingMachine({ onDistanceUpdate, onHandleStartAndEnd }) {
 
     const map = useMap();
