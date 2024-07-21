@@ -12,12 +12,9 @@ body {
     font-family: "lato", cursive;
 }
 
-/* For Chrome, Brave, and other WebKit browsers */
 ::-webkit-scrollbar {
     width: 6px;
-    /* Change width for vertical scrollbar */
     height: 6px;
-    /* Change height for horizontal scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
