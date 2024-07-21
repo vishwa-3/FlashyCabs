@@ -8,9 +8,9 @@ import { useMap } from 'react-leaflet';
 import location from '../location.json';
 
 L.Icon.Default.mergeOptions({
-    iconRetinaUrl: 'marker-icon-2x.png',
-    iconUrl: 'marker-icon.png',
-    shadowUrl: 'marker-shadow.png'
+    iconRetinaUrl: process.env.PUBLIC_URL + '/marker-icon-2x.png',
+    iconUrl: process.env.PUBLIC_URL + '/marker-icon.png',
+    shadowUrl: process.env.PUBLIC_URL + '/marker-shadow.png'
 });
 
 function LeafletRoutingMachine({ onDistanceUpdate, onHandleStartAndEnd }) {
